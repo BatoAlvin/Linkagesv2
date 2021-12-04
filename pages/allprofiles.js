@@ -2,7 +2,7 @@ import styles from "../styles/ProfileCard.module.css";
 import { db } from "../firebase/firebase";
 import { collection, getDocs, doc } from "firebase/firestore";
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 import { useSession, getSession } from "next-auth/react"
 
 export default function allprofiles({ data }) {
@@ -27,7 +27,7 @@ export default function allprofiles({ data }) {
       <div className={styles.projectContent}>
         <div className={styles.projectDetail}>
           {data.map((info) => (
-            <Link href="/profiles/[id]" as={`/profiles/${info.id}`} passHref>
+            <Link href="/call/[id]" as={`/call/${info.id}`} passHref>
               <div key={info.id}>
                 <div className={styles.details}>
                   <a target="_blank" rel="noopener noreferrer">

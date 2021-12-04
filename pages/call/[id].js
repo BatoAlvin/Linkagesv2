@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Border from '../../components/Border/Border'
 import styles from "./../../styles/ProfileHeader.module.css";
-import { db } from "./../../firebase/firebase";
+import { db } from "../../firebase/firebase";
 import { getDoc, getDocs, collection, doc } from "firebase/firestore";
 import FlagIcon from "@material-ui/icons/Flag";
 import Link from "next/link";
