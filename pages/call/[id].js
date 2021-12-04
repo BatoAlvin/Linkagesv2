@@ -163,7 +163,7 @@ export const getServerSideProps = async (context) => {
 };
 
 
-export async function getServerSideProps() {
+export async function getStaticPaths() {
   let data = [];
   const projects = await getDocs(collection(db, "far"));
   projects.forEach((doc) => {
