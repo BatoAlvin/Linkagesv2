@@ -150,7 +150,7 @@ export default function Profilesid({ info }) {
 }
 
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const docRef = doc(db, "far", context.params.id);
   const docSnap = await getDoc(docRef);
   const info = { id: docSnap.id, ...docSnap.data() };
@@ -163,7 +163,7 @@ export const getStaticProps = async (context) => {
 };
 
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
   let data = [];
   const projects = await getDocs(collection(db, "far"));
   projects.forEach((doc) => {
