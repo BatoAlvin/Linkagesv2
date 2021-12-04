@@ -348,12 +348,22 @@ export default function profileForm() {
           />
         </div>
         {/* Button */}
-        <input
+        {/* <input
           type="submit"
           value="Submit Form"
           style={{ backgroundColor: "#04739B" }}
           className="btn  rounded-0 border-0 w-100 text-light my-2 btn-primary"
-        />
+        /> */}
+
+        
+                      <button
+                       
+                        variant="contained"
+                        color="primary"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
 
         {/* <UploadProject/>      */}
       </form>
