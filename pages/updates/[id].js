@@ -19,10 +19,10 @@ import profileStyles from "../../styles/profile.module.css";
 import Link from "next/link";
 import Head from "next/head";
 //import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useSession, getSession } from "next-auth/react"
+//import { useSession, getSession } from "next-auth/react"
 
 export default function Updates({ info }) {
-  const { data: session, status } = useSession()
+  //const { data: session, status } = useSession()
   const [showAlert, setShowAlert] = useState(false);
   const [update, setUpdate] = useState(info);
   // const [file, setFile] = useState(null);
@@ -53,13 +53,13 @@ export default function Updates({ info }) {
   // };
 
 
-  if (status === "loading") {
-    return <p>Loading...</p>
-  }
+  // if (status === "loading") {
+  //   return <p>Loading...</p>
+  // }
 
-  if (status === "unauthenticated") {
-    return <p>Access Denied</p>
-  }
+  // if (status === "unauthenticated") {
+  //   return <p>Access Denied</p>
+  // }
 
   return (
     <>
@@ -154,10 +154,10 @@ export default function Updates({ info }) {
             <option value="" disabled selected>
               JobTitle
             </option>
-            <option>Frontend Developer</option>
-            <option>Backend Developer</option>
-            <option>Full Stack Developer</option>
-            <option>Dev Ops</option>
+            <option value='Frontend developer'>Frontend Developer</option>
+            <option value='Backend developer'>Backend Developer</option>
+            <option value='Fullstack developer'>Full Stack Developer</option>
+            <option value='Devops'>Dev Ops</option>
           </select>
         </div>
 
@@ -175,10 +175,10 @@ export default function Updates({ info }) {
             <option value="" disabled selected>
               Status
             </option>
-            <option>Intern</option>
-            <option>Volunteer</option>
-            <option>Part time Employed</option>
-            <option>Permanent Employed</option>
+            <option value='Intern'>Intern</option>
+            <option value='Volunteer'>Volunteer</option>
+            <option value='Part time employed'>Part time Employed</option>
+            <option value='Permanent employed'>Permanent Employed</option>
           </select>
         </div>
 
@@ -194,7 +194,7 @@ export default function Updates({ info }) {
             required
           >
             <option value="" disabled selected>
-              Status
+              Select
             </option>
             <option value="None">None</option>
               <option value="Html">HTML</option>

@@ -148,7 +148,7 @@ export default function profileForm() {
             <option value='Frontend developer'>Frontend Developer</option>
             <option value='Backend developer'>Backend Developer</option>
             <option value='Fullstack developer'>Full Stack Developer</option>
-            <option>Dev Ops</option>
+            <option value='Devops'>Dev Ops</option>
           </select>
         </div>
 
@@ -165,10 +165,10 @@ export default function profileForm() {
             <option value="" disabled selected>
               Status
             </option>
-            <option>Intern</option>
-            <option>Volunteer</option>
-            <option>Part time Employed</option>
-            <option>Permanent Employed</option>
+            <option value='Intern'>Intern</option>
+            <option value='Volunteer'>Volunteer</option>
+            <option value='Part time employed'>Part time Employed</option>
+            <option value='Permanent employed'>Permanent Employed</option>
           </select>
         </div>
 

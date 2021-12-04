@@ -12,18 +12,18 @@ import BorderCss from "../../styles/Border.module.css";
 import Image from 'next/image';
 import { Button, Typography } from "@material-ui/core";
 
-import { useSession, getSession } from "next-auth/react"
+//import { useSession, getSession } from "next-auth/react"
 
 export default function Profilesid({ info }) {
-  const { data: session, status } = useSession()
+  // const { data: session, status } = useSession()
 
-  if (status === "loading") {
-    return <p>Loading...</p>
-  }
+  // if (status === "loading") {
+  //   return <p>Loading...</p>
+  // }
 
-  if (status === "unauthenticated") {
-    return <p>Access Denied</p>
-  }
+  // if (status === "unauthenticated") {
+  //   return <p>Access Denied</p>
+  // }
 
   return (
     <>
@@ -150,7 +150,7 @@ export default function Profilesid({ info }) {
 }
 
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const docRef = doc(db, "far", context.params.id);
   const docSnap = await getDoc(docRef);
   const info = { id: docSnap.id, ...docSnap.data() };
