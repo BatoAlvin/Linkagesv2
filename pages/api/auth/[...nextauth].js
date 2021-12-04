@@ -18,9 +18,9 @@ export default NextAuth({
   session: {
     jwt: true
   },
-
+  jwt: {},
   //Database setup
-  database: process.env.DATABASE_URL,
+  //database: process.env.DATABASE_URL,
   secret: process.env.SECRET,
   // callbacks: {
   //   session: async (session, user) => {
